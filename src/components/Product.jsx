@@ -1,5 +1,5 @@
 // src/Product.jsx
-
+import { PiCurrencyCircleDollarLight } from "react-icons/pi";
 export default function Product({
   name,
   imgUrl = "https://dummyimage.com/640x480/2a2a2a/ffffff&text=Product+image+placeholder",
@@ -9,7 +9,11 @@ export default function Product({
     <>
       <h2>{name}</h2>
       <img src={imgUrl} alt={name} width="640" />
-      <p>Price: {price} credits</p>
+
+      <p>
+        Price: <PiCurrencyCircleDollarLight className="my-icon" size="24" />
+        {price} credits
+      </p>
     </>
   );
 }
